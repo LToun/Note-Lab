@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 import Vision
 import VisionKit
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController, UIPickerViewDelegate {
 
     private func configureDoc(){
         let scanningDocument = VNDocumentCameraViewController()
@@ -31,10 +31,14 @@ class MenuViewController: UIViewController {
         
         return button
     }()
+    
+    @IBOutlet weak var materiaTF: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    var materiasPicker = UIPickerView()
     var index:Int?
     var textVision:String=""
     var textPost:String=""
+    var materias:[String]=[]
     var imagenes:[UIImage]=[]{
         didSet{
             for imagen in self.imagenes{
@@ -56,7 +60,12 @@ class MenuViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        materiaTF.inputView=materiasPicker
+        materiasPicker.delegate = self
         
+        
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
         view.addSubview(addBttn)
         self.tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         tableView.delegate=self
@@ -82,7 +91,11 @@ class MenuViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     */
-@objc func load(){
+    @IBAction func CerrarSesion(_ sender: Any) {
+        AmacaConfig.shared.setApiToken("nil")
+        
+    }
+    @objc func load(){
         guard let url = URL(string: "https://boiling-spire-85241.herokuapp.com/apunte") else { return  }
         var req=URLRequest(url: url)
         req.httpMethod="GET"
@@ -92,7 +105,7 @@ class MenuViewController: UIViewController {
                 print(data)
                 do{
                     self.notes=try JSONDecoder().decode(NotesDecoder.self, from: data)
-                    print(String(describing:self.notes?.apuntes.count))
+                    self.calculaMaterias()
                 }catch {
                     print(String(describing: error))
                 }
@@ -101,15 +114,28 @@ class MenuViewController: UIViewController {
         }.resume()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let textViewController:TextViewController = segue.destination as! TextViewController
-        if textPost .isEmpty{
-            textViewController.apunte=self.notes?.apuntes[self.index!]
-            textViewController.post=false
-        }else{
-            textViewController.apunte = Note(text: textPost, materia: "Materia", titulo: "Título")
-            textViewController.post=true
+        if segue.identifier=="CerrarSesion"{
+            print("sesion cerrada")
+        }else {
+            let textViewController:TextViewController = segue.destination as! TextViewController
+            if textPost .isEmpty{
+                textViewController.apunte=self.notes?.apuntes[self.index!]
+                textViewController.post=false
+            }else{
+                textViewController.apunte = Note(text: textPost, materia: "", titulo: "")
+                textViewController.post=true
+            }
         }
         
+    }
+    func calculaMaterias(){
+        for i in 0..<(notes?.apuntes.count)!{
+            if !materias.contains((notes?.apuntes[i].materia)!){
+                materias.append((notes?.apuntes[i].materia)!)
+            }
+
+        }
+        print(materias)
     }
     func reconoceTexto(image: UIImage?){
         guard let cgImage=image?.cgImage else{return}
@@ -172,6 +198,7 @@ extension MenuViewController: UITableViewDataSource {
 //            }
             cell.autorLbl.text=notes?.apuntes[indexPath.row].author
             cell.tituloLbl.text=notes?.apuntes[indexPath.row].titulo
+            cell.carrera.text=notes?.apuntes[indexPath.row].carrera
             cell.fechaLbl.text=notes?.apuntes[indexPath.row].date?.components(separatedBy: " ")[0]
             return cell
         }
@@ -179,4 +206,19 @@ extension MenuViewController: UITableViewDataSource {
     }
     
     
+}
+extension MenuViewController:UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return materias.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return materias[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        materiaTF.text=materias[row]
+    }
 }

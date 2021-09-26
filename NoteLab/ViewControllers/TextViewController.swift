@@ -25,9 +25,8 @@ class TextViewController: UIViewController  {
         let tap:UITapGestureRecognizer=UITapGestureRecognizer(target: self, action: #selector(DismissKeyBoard))
         self.view.addGestureRecognizer(tap)
         guard let pist=post else {return}
-        print(".-....-.-.-.-.-.-.-.-.-.-..-.-.-.-.-.-.-.-.-..-.-.-.-.-.-.-.-.-.-.-")
         print(pist)
-        if pist{
+        if pist{//true
             tituloLbl.isHidden = pist
             materiaLbl.isHidden = pist
             tituloTF.isHidden = !pist
@@ -38,13 +37,14 @@ class TextViewController: UIViewController  {
             materialTF.text=apunte?.materia
             
             
-        }else{
-            tituloLbl.isHidden = !pist
-            materiaLbl.isHidden = !pist
-            tituloTF.isHidden = pist
-            materialTF.isHidden = pist
-            postButton.isHidden = pist
-            textView.isEditable = !pist
+        }else{//No habra post false
+            tituloLbl.isHidden = pist
+            materiaLbl.isHidden = pist
+            tituloTF.isHidden = !pist
+            materialTF.isHidden = !pist
+            postButton.isHidden = !pist
+            textView.isEditable = pist
+            textView.isSelectable=true
             
             materiaLbl.text=apunte?.materia
             tituloLbl.text=apunte?.titulo

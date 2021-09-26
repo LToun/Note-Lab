@@ -21,25 +21,31 @@
                         <rect key="frame" x="5" y="5" width="404" height="70"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eN-DL-gdb">
-                                <rect key="frame" x="5" y="5" width="43" height="21"/>
+                                <rect key="frame" x="15" y="5" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OP9-mb-Adb">
-                                <rect key="frame" x="5" y="44" width="50.5" height="21"/>
+                                <rect key="frame" x="15" y="44" width="50.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hd7-s6-Ljo">
-                                <rect key="frame" x="63.5" y="44" width="42" height="21"/>
+                                <rect key="frame" x="73.5" y="44" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fp-mv-FF8">
-                                <rect key="frame" x="352.5" y="44" width="46.5" height="21"/>
+                                <rect key="frame" x="342.5" y="44" width="46.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carrera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOb-CX-noN">
+                                <rect key="frame" x="337" y="5" width="57" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -48,21 +54,22 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4eN-DL-gdb" firstAttribute="top" secondItem="Nq6-x8-CNs" secondAttribute="top" constant="5" id="1Lm-Gq-BQw"/>
-                            <constraint firstAttribute="trailing" secondItem="1Fp-mv-FF8" secondAttribute="trailing" constant="5" id="7Np-L3-rxy"/>
+                            <constraint firstAttribute="trailing" secondItem="1Fp-mv-FF8" secondAttribute="trailing" constant="15" id="7Np-L3-rxy"/>
                             <constraint firstItem="Hd7-s6-Ljo" firstAttribute="firstBaseline" secondItem="OP9-mb-Adb" secondAttribute="firstBaseline" id="8Kc-ir-oTC"/>
-                            <constraint firstItem="4eN-DL-gdb" firstAttribute="leading" secondItem="Nq6-x8-CNs" secondAttribute="leading" constant="5" id="Hva-6u-jqp"/>
+                            <constraint firstItem="4eN-DL-gdb" firstAttribute="leading" secondItem="Nq6-x8-CNs" secondAttribute="leading" constant="15" id="Hva-6u-jqp"/>
                             <constraint firstAttribute="bottom" secondItem="OP9-mb-Adb" secondAttribute="bottom" constant="5" id="OHG-3Q-sl5"/>
-                            <constraint firstItem="OP9-mb-Adb" firstAttribute="leading" secondItem="Nq6-x8-CNs" secondAttribute="leading" constant="5" id="T2d-pA-5MI"/>
+                            <constraint firstItem="OP9-mb-Adb" firstAttribute="leading" secondItem="Nq6-x8-CNs" secondAttribute="leading" constant="15" id="T2d-pA-5MI"/>
                             <constraint firstItem="Hd7-s6-Ljo" firstAttribute="leading" secondItem="OP9-mb-Adb" secondAttribute="trailing" constant="8" symbolic="YES" id="ilF-oc-Dc0"/>
                             <constraint firstAttribute="bottom" secondItem="1Fp-mv-FF8" secondAttribute="bottom" constant="5" id="mP2-eS-GBu"/>
+                            <constraint firstItem="KOb-CX-noN" firstAttribute="top" secondItem="Nq6-x8-CNs" secondAttribute="top" constant="5" id="nvF-TC-pDh"/>
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="Nq6-x8-CNs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="QFX-Rw-GyU"/>
                     <constraint firstAttribute="bottom" secondItem="Nq6-x8-CNs" secondAttribute="bottom" constant="5" id="ahp-BY-WYD"/>
                     <constraint firstItem="Nq6-x8-CNs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="deH-5l-uf8"/>
+                    <constraint firstAttribute="trailing" secondItem="KOb-CX-noN" secondAttribute="trailing" constant="15" id="jqE-ci-Jfr"/>
                     <constraint firstAttribute="trailing" secondItem="Nq6-x8-CNs" secondAttribute="trailing" constant="5" id="vwZ-hr-IAf"/>
                 </constraints>
             </tableViewCellContentView>
@@ -70,8 +77,10 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="autorLbl" destination="Hd7-s6-Ljo" id="Am2-W9-2IC"/>
+                <outlet property="carrera" destination="KOb-CX-noN" id="bnv-33-jv7"/>
                 <outlet property="fechaLbl" destination="1Fp-mv-FF8" id="Wyn-y5-nBi"/>
                 <outlet property="tituloLbl" destination="4eN-DL-gdb" id="M8w-Aw-jdi"/>
+                <outlet property="view" destination="Nq6-x8-CNs" id="IZE-Fu-UIL"/>
             </connections>
             <point key="canvasLocation" x="237.68115942028987" y="33.482142857142854"/>
         </tableViewCell>

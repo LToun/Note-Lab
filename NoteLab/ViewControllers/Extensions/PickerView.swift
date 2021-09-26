@@ -28,6 +28,12 @@ extension SignUp:UIPickerViewDelegate,UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch pickerView.tag {
         case 1:
+            if unis[row].name != "Universidad Nacional Autónoma de México"{
+                BetaUser()
+            }
+            else{
+                responseLabel.text=""
+            }
             return unis[row].name
         case 2:
             return carrera[row]

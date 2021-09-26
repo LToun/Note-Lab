@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WYw-go-mjJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -24,6 +24,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LCM-0u-tUq">
                                 <rect key="frame" x="161" y="712" width="92" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Crear usuario">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -33,6 +34,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hkr-9F-FP0">
                                 <rect key="frame" x="154" y="762" width="106" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="  Iniciar sesión  ">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -43,53 +45,68 @@
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FZb-uw-ru9">
                                 <rect key="frame" x="157" y="244.5" width="100" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="XIT-Sw-E4c"/>
                                 </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Universidad" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="c6z-gi-pd7">
                                 <rect key="frame" x="152.5" y="298.5" width="109.5" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="xXq-j2-ZJC"/>
                                 </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="continue"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Carrera" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="x4z-ui-Mj9">
                                 <rect key="frame" x="157" y="514.5" width="100" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="CdK-q4-7gq"/>
                                 </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="continue"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cMj-qA-gXF">
                                 <rect key="frame" x="153.5" y="460.5" width="107" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="EJM-wV-Oeu"/>
                                 </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="continue" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VTM-1t-TLB">
                                 <rect key="frame" x="153.5" y="406.5" width="107" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Q6Q-et-2OR"/>
                                 </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="continue" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Semestre" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cqj-t5-Zeo">
                                 <rect key="frame" x="157" y="568.5" width="100" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="fZd-p2-Rwq"/>
                                 </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="continue"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwe-mv-OUh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwe-mv-OUh">
                                 <rect key="frame" x="207" y="844" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -103,8 +120,11 @@
                             </label>
                             <textField opaque="NO" contentMode="left" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VOs-gi-kcq">
                                 <rect key="frame" x="102" y="352.5" width="210" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="continue"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -162,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-559" y="32"/>
+            <point key="canvasLocation" x="-612" y="481"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="m93-HU-Ipu">
@@ -180,6 +200,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lzx-mK-d4i">
                                 <rect key="frame" x="161" y="762" width="92" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Crear usuario">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -189,22 +210,29 @@
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="D3I-Es-cw1">
                                 <rect key="frame" x="157" y="244.5" width="100" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="2as-Mb-NUi"/>
                                 </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l6S-CT-0dq">
                                 <rect key="frame" x="153.5" y="298.5" width="107" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="k8f-Z1-hJt"/>
                                 </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4b8-cb-Ej2">
                                 <rect key="frame" x="162" y="712" width="90" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Iniciar sesión">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -255,27 +283,48 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <sections/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Materia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbS-2H-ewx">
-                                <rect key="frame" x="180" y="54" width="54" height="19"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znl-tb-bha">
+                                <rect key="frame" x="322" y="48.5" width="92" height="30"/>
+                                <state key="normal" title="Cerrar sesión">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="CerrarSesion:" destination="Xtw-vt-anL" eventType="touchUpInside" id="cnm-mx-YBp"/>
+                                    <segue destination="WYw-go-mjJ" kind="presentation" identifier="CerrarSesion" id="fcA-Nj-vpF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ko4-BN-Z5K">
+                                <rect key="frame" x="20" y="48.5" width="55" height="30"/>
+                                <state key="normal" title="Resume">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OMw-nb-SUP">
+                                <rect key="frame" x="159" y="46.5" width="32" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="peX-Zc-R2W"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Ko4-BN-Z5K" firstAttribute="centerY" secondItem="OMw-nb-SUP" secondAttribute="centerY" id="8Z2-Kw-zIg"/>
+                            <constraint firstItem="Ko4-BN-Z5K" firstAttribute="leading" secondItem="peX-Zc-R2W" secondAttribute="leading" constant="20" id="8qE-sw-158"/>
+                            <constraint firstItem="Ko4-BN-Z5K" firstAttribute="top" secondItem="peX-Zc-R2W" secondAttribute="top" constant="4.5" id="CUV-GE-BM5"/>
+                            <constraint firstItem="peX-Zc-R2W" firstAttribute="trailing" secondItem="znl-tb-bha" secondAttribute="trailing" id="CvP-vS-iWz"/>
                             <constraint firstItem="peX-Zc-R2W" firstAttribute="trailing" secondItem="jmn-iH-U0l" secondAttribute="trailing" id="FZ5-OD-C4l"/>
                             <constraint firstItem="peX-Zc-R2W" firstAttribute="bottom" secondItem="jmn-iH-U0l" secondAttribute="bottom" id="GPb-ei-38W"/>
-                            <constraint firstItem="SbS-2H-ewx" firstAttribute="centerX" secondItem="IiZ-eV-DYJ" secondAttribute="centerX" id="Hfg-CR-JA3"/>
                             <constraint firstItem="jmn-iH-U0l" firstAttribute="leading" secondItem="peX-Zc-R2W" secondAttribute="leading" id="IhS-x7-0uH"/>
                             <constraint firstItem="peX-Zc-R2W" firstAttribute="bottom" secondItem="jmn-iH-U0l" secondAttribute="bottom" id="Jk2-AU-Ad0"/>
+                            <constraint firstItem="Ko4-BN-Z5K" firstAttribute="baseline" secondItem="znl-tb-bha" secondAttribute="baseline" id="LYY-cP-I3t"/>
                             <constraint firstItem="peX-Zc-R2W" firstAttribute="bottom" secondItem="jmn-iH-U0l" secondAttribute="bottom" id="N1G-gY-W2T"/>
                             <constraint firstItem="jmn-iH-U0l" firstAttribute="top" secondItem="peX-Zc-R2W" secondAttribute="top" constant="120" id="Zei-0k-bmM"/>
-                            <constraint firstItem="SbS-2H-ewx" firstAttribute="top" secondItem="peX-Zc-R2W" secondAttribute="top" constant="10" id="tvK-Sm-91L"/>
+                            <constraint firstItem="OMw-nb-SUP" firstAttribute="leading" secondItem="Ko4-BN-Z5K" secondAttribute="trailing" constant="84" id="g97-dc-36G"/>
+                            <constraint firstItem="znl-tb-bha" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OMw-nb-SUP" secondAttribute="trailing" constant="8" symbolic="YES" id="uDY-Y1-B2v"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="materiaTF" destination="OMw-nb-SUP" id="qiY-kj-C6J"/>
                         <outlet property="tableView" destination="jmn-iH-U0l" id="eY9-OL-w4V"/>
                         <segue destination="Yrx-vg-48Q" kind="presentation" identifier="TextView" id="eTb-Jt-NnS"/>
                     </connections>
@@ -330,18 +379,18 @@
                                     <segue destination="Xtw-vt-anL" kind="presentation" identifier="MapaSegue" id="FGz-1G-og6"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KUK-aM-hT8">
-                                <rect key="frame" x="191" y="46.5" width="32" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Materia" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KUK-aM-hT8">
+                                <rect key="frame" x="169" y="46.5" width="76.5" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lgx-Y2-tW5">
-                                <rect key="frame" x="20" y="86.5" width="32" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Título" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lgx-Y2-tW5">
+                                <rect key="frame" x="20" y="86.5" width="64.5" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVm-xP-oOx">
-                                <rect key="frame" x="338" y="43" width="56" height="30"/>
+                                <rect key="frame" x="360.5" y="43" width="33.5" height="30"/>
                                 <state key="normal" title="Post">
                                     <color key="titleColor" systemColor="systemBlueColor"/>
                                 </state>
@@ -355,6 +404,7 @@
                         <constraints>
                             <constraint firstItem="4Vs-rt-Jqa" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="D5U-h3-Rsw" secondAttribute="trailing" symbolic="YES" id="2Xu-4R-cuW"/>
                             <constraint firstItem="n7W-Gq-e1p" firstAttribute="trailing" secondItem="4Vs-rt-Jqa" secondAttribute="trailing" constant="-20" id="6NB-6u-Kq0"/>
+                            <constraint firstItem="4Vs-rt-Jqa" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Lgx-Y2-tW5" secondAttribute="trailing" symbolic="YES" id="8I9-d4-6wy"/>
                             <constraint firstItem="4Vs-rt-Jqa" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Tb1-AM-Asp" secondAttribute="trailing" symbolic="YES" id="9Ot-Wj-rAC"/>
                             <constraint firstItem="D5U-h3-Rsw" firstAttribute="leading" secondItem="4Vs-rt-Jqa" secondAttribute="leading" constant="20" id="CYj-WI-PsU"/>
                             <constraint firstItem="Lgx-Y2-tW5" firstAttribute="leading" secondItem="4Vs-rt-Jqa" secondAttribute="leading" constant="20" id="F7h-uM-8Rk"/>
@@ -395,7 +445,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8uW-ly-Yqw"/>
+        <segue reference="eTb-Jt-NnS"/>
+        <segue reference="FGz-1G-og6"/>
+        <segue reference="fcA-Nj-vpF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
@@ -406,6 +458,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

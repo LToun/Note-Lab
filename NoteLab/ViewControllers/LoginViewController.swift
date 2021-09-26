@@ -9,6 +9,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var iniciaButton: UIButton!
+
+
     @IBOutlet weak var creaButton: UIButton!
     @IBOutlet weak var correoTextField: UITextField!
     @IBOutlet weak var contraTextField: UITextField!
@@ -18,21 +20,33 @@ class LoginViewController: UIViewController {
         let tap:UITapGestureRecognizer=UITapGestureRecognizer(target: self, action: #selector(DismissKeyBoard))
         self.view.addGestureRecognizer(tap)
         iniciaButton.layer.cornerRadius=7
-        iniciaButton.layer.borderColor = CGColor.init(red: 1.2, green: 0, blue: 0, alpha: 1.5)
+        iniciaButton.layer.borderColor = CGColor.init(red: 0, green: 1.2, blue: 0, alpha: 1.5)
         iniciaButton.layer.borderWidth = 1.0
+        
+        creaButton.layer.cornerRadius=7
+        creaButton.layer.borderColor = CGColor.init(red: 0, green: 0, blue: 0, alpha: 1.5)
+        creaButton.layer.borderWidth = 1.0
+        
+        creaButton.backgroundColor = .systemGray2
+        iniciaButton.backgroundColor = .systemGray2
+        
+        correoTextField.attributedPlaceholder = NSAttributedString(string: "Correo", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        contraTextField.attributedPlaceholder = NSAttributedString(string: "Correo", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
         if AmacaConfig.shared.apiToken != nil{
-            guard let url = URL(string: "https://boiling-spire-85241.herokuapp.com/user") else { return  }
+            guard let url = URL(string: "https://boiling-spire-85241.herokuapp.com/trytoken") else { return  }
             var req=URLRequest(url: url)
             req.httpMethod="GET"
             req.setValue(AmacaConfig.shared.apiToken, forHTTPHeaderField: "payloadToken")
             URLSession.shared.dataTask(with: req) { data, response, error in
                 if let data=data{
                     do{
-                        let usuario=try JSONDecoder().decode(User.self, from: data)
-                        AmacaConfig.shared.setUserData(usuario)
-                        DispatchQueue.main.async {
-                            self.performSegue(withIdentifier: "sesionIniciada", sender: self)
+                        let response=try JSONDecoder().decode(Message.self, from: data)
+                        if response.message == "Good token"{
+                            DispatchQueue.main.async {
+                                self.performSegue(withIdentifier: "sesionIniciada", sender: self)
+                            }
                         }
+                        
                     }catch {
                         print("Credenciales incorrectas")
                     }
@@ -60,7 +74,6 @@ class LoginViewController: UIViewController {
             if let data=data{
                 do{
                     let tkn=try JSONDecoder().decode(Token.self, from: data)
-                    print(tkn)
                     AmacaConfig.shared.setApiToken(tkn.token!)
                     DispatchQueue.main.async {
                         self.performSegue(withIdentifier: "sesionIniciada", sender: self)
@@ -81,5 +94,6 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }
