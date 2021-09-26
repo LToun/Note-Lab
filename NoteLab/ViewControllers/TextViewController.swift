@@ -31,7 +31,7 @@ class TextViewController: UIViewController  {
             materiaLbl.isHidden = pist
             tituloTF.isHidden = !pist
             materialTF.isHidden = !pist
-            postButton.isEnabled = !pist
+            postButton.isEnabled = pist
             textView.isEditable = pist
             tituloTF.text=apunte?.titulo
             materialTF.text=apunte?.materia

@@ -58,11 +58,12 @@ class MenuViewController: UIViewController, UIPickerViewDelegate {
             }
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         materiaTF.inputView=materiasPicker
         materiasPicker.delegate = self
-        
+        materiaTF.attributedPlaceholder=NSAttributedString(string: "Todo",attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
         
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
@@ -71,7 +72,8 @@ class MenuViewController: UIViewController, UIPickerViewDelegate {
         tableView.delegate=self
         tableView.dataSource=self
         addBttn.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
-        load()
+        load(value: "")
+
     }
     @objc func didTapButton(){
         configureDoc()
@@ -95,8 +97,8 @@ class MenuViewController: UIViewController, UIPickerViewDelegate {
         AmacaConfig.shared.setApiToken("nil")
         
     }
-    @objc func load(){
-        guard let url = URL(string: "https://boiling-spire-85241.herokuapp.com/apunte") else { return  }
+    @objc func load(value:String?){
+        guard let url = URL(string: "https://boiling-spire-85241.herokuapp.com/apunte\(value ?? "")") else { return  }
         var req=URLRequest(url: url)
         req.httpMethod="GET"
         req.setValue(AmacaConfig.shared.apiToken, forHTTPHeaderField:"payloadToken")
@@ -169,6 +171,7 @@ class MenuViewController: UIViewController, UIPickerViewDelegate {
 extension MenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.index=indexPath.row
+
         performSegue(withIdentifier: "TextView", sender: self)
     }
 }
@@ -220,5 +223,7 @@ extension MenuViewController:UIPickerViewDataSource{
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         materiaTF.text=materias[row]
+        materiaTF.resignFirstResponder()
+        load(value:"/\(materiaTF.text!)")
     }
 }
