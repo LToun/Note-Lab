@@ -9,6 +9,9 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
+    @IBOutlet weak var fechaLbl: UILabel!
+    @IBOutlet weak var autorLbl: UILabel!
+    @IBOutlet weak var tituloLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

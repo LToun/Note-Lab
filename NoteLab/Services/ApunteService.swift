@@ -8,15 +8,16 @@
 import Foundation
 import Foundation
 
-struct CreateUserService {
+struct ApunteService {
     private var endpoint: RestClient<Note>
     init() {
-        endpoint = RestClient<User>(client: AmacaConfig.shared.httpClient, path: "/user")
+        endpoint = RestClient<Note>(client: AmacaConfig.shared.httpClient, path: "/apunte")
     }
 
-    func create(_ model: User, complete: @escaping (Result<User?, Error>) -> Void ) {
+    func create(_ model: Note, complete: @escaping (Result<Note?, Error>) -> Void ) {
         try? endpoint.create(model: model) { result in
             DispatchQueue.main.async { complete(result) }
         }
+        
     }
 }

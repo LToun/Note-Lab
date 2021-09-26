@@ -20,6 +20,11 @@ struct AmacaConfig {
             UserDefaults.standard.string(forKey: "amaca.apitoken")
         }
     }
+    var user: User? {
+        get {
+            UserDefaults.standard.value(forKey: "amaca.user") as? User
+        }
+    }
 
     func setApiToken(_ value: String) {
         UserDefaults.standard.set(value, forKey: "amaca.apitoken")
@@ -31,5 +36,8 @@ struct AmacaConfig {
 
     private var values: NSDictionary {
         return NSDictionary(contentsOfFile: filepath)!
+    }
+    func setUserData(_ value: User){
+        UserDefaults.standard.set(try? PropertyListEncoder().encode(value),forKey: "amaca.user")
     }
 }

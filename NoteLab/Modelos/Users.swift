@@ -6,3 +6,9 @@
 //
 
 import Foundation
+struct Users{
+    var users:[User]
+    init(users:[User]) {
+        self.users=users
+    }
+}

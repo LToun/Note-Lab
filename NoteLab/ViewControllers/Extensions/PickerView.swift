@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-extension ViewController:UIPickerViewDelegate,UIPickerViewDataSource{
+extension SignUp:UIPickerViewDelegate,UIPickerViewDataSource{
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -41,6 +41,7 @@ extension ViewController:UIPickerViewDelegate,UIPickerViewDataSource{
         switch pickerView.tag {
         case 1:
             uniTextField.text=unis[row].name
+            dominioEmail.text=unis[row].domains?[0]
             uniTextField.resignFirstResponder()
             
         case 2:
@@ -55,7 +56,7 @@ extension ViewController:UIPickerViewDelegate,UIPickerViewDataSource{
         }
     }
     func GetData(){
-        let urlUnis = URL(string: "http://universities.hipolabs.com/search?country=mexico")
+        let urlUnis = URL(string: "http://universities.hipolabs.com/search?name=nacional&country=mexico")
         let _: Void=URLSession.shared.dataTask(with: urlUnis!) {data, _, error in
             if let error=error{
                 print(error.localizedDescription)
