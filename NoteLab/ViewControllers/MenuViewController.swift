@@ -31,6 +31,8 @@ class MenuViewController: UIViewController, UIPickerViewDelegate {
         
         return button
     }()
+
+    @IBOutlet weak var resumeState: UISwitch!
     
     @IBOutlet weak var materiaTF: UITextField!
     @IBOutlet weak var tableView: UITableView!
@@ -126,6 +128,7 @@ class MenuViewController: UIViewController, UIPickerViewDelegate {
             }else{
                 textViewController.apunte = Note(text: textPost, materia: "", titulo: "")
                 textViewController.post=true
+
             }
         }
         
@@ -139,6 +142,7 @@ class MenuViewController: UIViewController, UIPickerViewDelegate {
         }
         print(materias)
     }
+    
     func reconoceTexto(image: UIImage?){
         guard let cgImage=image?.cgImage else{return}
 //        handler

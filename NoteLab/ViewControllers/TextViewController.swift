@@ -56,6 +56,34 @@ class TextViewController: UIViewController  {
     }
     @IBAction func Post(_ sender: Any) {
         let postService=CreatePostService()
+        guard let textfield=self.textView.text else{return}
+        guard let titulo=self.tituloTF.text else{return}
+        print("13y4509238709450987yer098upoifhbldkjbvlidfhp9qeroghalisd")
+        print(textfield)
+        print(titulo)
+        DispatchQueue.global(qos: .userInitiated).async {
+            let body: [String: String] = ["text": textfield , "materia": "AI","titulo":titulo  ]
+            
+            let finalBody = try? JSONSerialization.data(withJSONObject: body)
+            guard let url=URL(string: "http://127.0.0.1:5000/ai")else {return}
+            var req=URLRequest(url: url)
+            req.httpMethod="POST"
+            req.setValue(AmacaConfig.shared.apiToken, forHTTPHeaderField:"payloadToken")
+            req.httpBody=finalBody
+            URLSession.shared.dataTask(with: req){
+                      (data, response, error) in
+                      
+                guard data != nil else{
+                        
+                        print("/////////////////////////@@@@@@@@@@@@Exito\(String(describing: data))")
+                        
+                          return
+                      }
+                
+                    print(error?.localizedDescription ?? "///////////////@@@@@@@@@@@")
+                      
+                  }.resume()
+        }
         postService.create(Note(text: textView.text, materia: materialTF.text ?? "Materia perdida", titulo: tituloTF.text ?? "No hacemos magia")) { resul in
             switch resul{
                 case .success(let note):

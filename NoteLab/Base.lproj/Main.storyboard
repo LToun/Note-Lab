@@ -284,7 +284,7 @@
                                 <sections/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znl-tb-bha">
-                                <rect key="frame" x="302" y="48.5" width="92" height="30"/>
+                                <rect key="frame" x="302" y="27.5" width="92" height="30"/>
                                 <state key="normal" title="Cerrar sesión">
                                     <color key="titleColor" systemColor="systemRedColor"/>
                                 </state>
@@ -292,12 +292,6 @@
                                     <action selector="CerrarSesion:" destination="Xtw-vt-anL" eventType="touchUpInside" id="cnm-mx-YBp"/>
                                     <segue destination="WYw-go-mjJ" kind="presentation" identifier="CerrarSesion" id="fcA-Nj-vpF"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ko4-BN-Z5K">
-                                <rect key="frame" x="20" y="48.5" width="55" height="30"/>
-                                <state key="normal" title="Resume">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OMw-nb-SUP">
                                 <rect key="frame" x="191" y="74" width="32" height="34"/>
@@ -308,20 +302,17 @@
                         <viewLayoutGuide key="safeArea" id="peX-Zc-R2W"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Ko4-BN-Z5K" firstAttribute="leading" secondItem="peX-Zc-R2W" secondAttribute="leading" constant="20" id="8qE-sw-158"/>
                             <constraint firstItem="OMw-nb-SUP" firstAttribute="top" secondItem="peX-Zc-R2W" secondAttribute="top" constant="30" id="C59-Yc-0wd"/>
-                            <constraint firstItem="Ko4-BN-Z5K" firstAttribute="top" secondItem="peX-Zc-R2W" secondAttribute="top" constant="4.5" id="CUV-GE-BM5"/>
                             <constraint firstItem="peX-Zc-R2W" firstAttribute="trailing" secondItem="znl-tb-bha" secondAttribute="trailing" constant="20" id="CvP-vS-iWz"/>
                             <constraint firstItem="peX-Zc-R2W" firstAttribute="trailing" secondItem="jmn-iH-U0l" secondAttribute="trailing" id="FZ5-OD-C4l"/>
                             <constraint firstItem="peX-Zc-R2W" firstAttribute="bottom" secondItem="jmn-iH-U0l" secondAttribute="bottom" id="GPb-ei-38W"/>
                             <constraint firstItem="jmn-iH-U0l" firstAttribute="leading" secondItem="peX-Zc-R2W" secondAttribute="leading" id="IhS-x7-0uH"/>
                             <constraint firstItem="peX-Zc-R2W" firstAttribute="bottom" secondItem="jmn-iH-U0l" secondAttribute="bottom" id="Jk2-AU-Ad0"/>
-                            <constraint firstItem="Ko4-BN-Z5K" firstAttribute="baseline" secondItem="znl-tb-bha" secondAttribute="baseline" id="LYY-cP-I3t"/>
                             <constraint firstItem="peX-Zc-R2W" firstAttribute="bottom" secondItem="jmn-iH-U0l" secondAttribute="bottom" id="N1G-gY-W2T"/>
-                            <constraint firstItem="OMw-nb-SUP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ko4-BN-Z5K" secondAttribute="trailing" constant="8" symbolic="YES" id="N85-ae-Mtf"/>
                             <constraint firstItem="OMw-nb-SUP" firstAttribute="centerX" secondItem="IiZ-eV-DYJ" secondAttribute="centerX" id="ZSd-yN-l3Q"/>
                             <constraint firstItem="jmn-iH-U0l" firstAttribute="top" secondItem="peX-Zc-R2W" secondAttribute="top" constant="120" id="Zei-0k-bmM"/>
                             <constraint firstItem="znl-tb-bha" firstAttribute="leading" relation="lessThanOrEqual" secondItem="OMw-nb-SUP" secondAttribute="trailing" constant="79" id="dhv-Qf-IAo"/>
+                            <constraint firstItem="znl-tb-bha" firstAttribute="top" secondItem="IiZ-eV-DYJ" secondAttribute="topMargin" constant="-16.5" id="ufh-Va-gb8"/>
                         </constraints>
                     </view>
                     <connections>
